@@ -19,35 +19,37 @@ table {
     max-width: 1600px;
   }
   
-  table, th, td {
+table, th, td {
     border: 1px solid #f0f0f0;
     border-collapse: collapse;
-  }
+}
   
-  .noBorder td:not([colspan]) {
+.noBorder td:not([colspan]) {
     border-left: none;
     border-right: none;
-  }
-  .noBorder td[colspan='3'] {
+}
+
+.noBorder td[colspan='3'] {
     border: 1px solid #f0f0f0;
-  }
-  .leftBorder {
+}
+
+.leftBorder {
     border-left: 1px solid #f0f0f0!important;
-  }
+}
   
-  .totalRow {
+.totalRow {
     background-color: #fef7ec;
-  }
+}
   
-  td, th {
+td, th {
     padding: 10px;
-  }
+}
   
-  th {
+th {
     text-align: left;
-  }
+}
   
-  thead tr td div {
+thead tr td div {
     cursor: pointer;
     display: flex;
-  }
+}

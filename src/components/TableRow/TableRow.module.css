@@ -27,11 +27,17 @@
 .noBorder td:not([colspan]) {
     border-left: none;
     border-right: none;
-  }
-  .noBorder td[colspan='3'] {
+}
+.noBorder td[colspan='3'] {
     border: 1px solid #f0f0f0;
-  }
-  .leftBorder {
+}
+.leftBorder {
     border-left: 1px solid #f0f0f0!important;
-  }
+}
+
+.type {
+    color: #d1ccca;
+    font-size: 14px;
+    margin-top: 5px;
+}
   
