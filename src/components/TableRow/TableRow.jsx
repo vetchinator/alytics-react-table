@@ -1,23 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import useSortableData from '../useSortableData/useSortableData';
 import style from './TableRow.module.css';
 
-const TableRow = ({ data }) => {
+const TableRow = ({ data, sortConfig }) => {
 
     const [show, setShow] = useState(false);
     const onClick = () => {
-        setShow(() => !show)
+        setShow(() => !show);
     }
 
+    const { items, requestSort} = useSortableData(data.sources);
+    useEffect(() => {
+        if(sortConfig !== null && data.sources !== []) {
+            requestSort(sortConfig.key)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sortConfig, data.sources])
+    
     return (
         <>
             <tr className={style.noBorder + ' ' + (show ? style.show : '')}>
                 <td colSpan='3'>
                     <div className={style.title}>
-                        {data.sources && <button className={style.button} onClick={onClick}>{show ? '-' : '+'}</button>}
+                        {(data.sources.length > 0) && <button className={style.button} onClick={onClick}>{show ? '-' : '+'}</button>}
                         <img style={{ width: '20px', height: '20px' }} src={data.imgSrc} alt="logo" />
                         <p>{data.name}</p>
                     </div>
-                    <p>{data.type} {data.type === 'Группа.' && data.sources ? <span>{`Источников ${data.sources.length}`} </span> : null}</p>
+                    <p className={style.type}>{data.type} {data.type === 'Группа.' && (data.sources.length > 0) ? <span>{`Источников ${data.sources.length}`} </span> : null}</p>
                 </td>
 
                 <td className={style.leftBorder}>{data.traficShow}</td>
@@ -37,7 +46,7 @@ const TableRow = ({ data }) => {
             </tr>
 
             {data.sources && show &&
-                data.sources.map((s) => (
+                items.map((s) => (
                     <tr key={s.id} className={style.noBorder + ' ' + style.show}>
                         <td colSpan='3'>
                             <div className={style.title}>
