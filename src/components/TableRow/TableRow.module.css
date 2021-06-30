@@ -1,0 +1,37 @@
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title img {
+    padding-right: 10px;
+}
+
+.button {
+    padding: 0px 5px;
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+    background: #818a91;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 23px;
+    border-radius: 5px;
+}
+
+.show {
+    background-color: #f6f6f6;
+}
+
+.noBorder td:not([colspan]) {
+    border-left: none;
+    border-right: none;
+  }
+  .noBorder td[colspan='3'] {
+    border: 1px solid #f0f0f0;
+  }
+  .leftBorder {
+    border-left: 1px solid #f0f0f0!important;
+  }
+  
