@@ -1,3 +1,6 @@
+### Project placed on
+https://vetchinator.github.io/alytics-react-table/
+
 ### Available Scripts
 
 In the project directory, you can run:
