@@ -29,21 +29,21 @@ const TableHeader = ({ sortConfig, requestSort }) => {
                 <th colSpan='6'>Трафик</th>
                 <th colSpan='3'>
                     <div className={style.firstTitle}>
-                        <img src="/images/crm.png" alt="crm" />
+                        <img src={process.env.PUBLIC_URL + '/images/crm.png'} alt="crm" />
                         <p>Продажи</p>
                     </div>
                     <div className={style.secondTitle}>
-                        <img src='/images/model-linear.png' alt="linear" />
+                        <img src={process.env.PUBLIC_URL + '/images/model-linear.png'} alt="linear" />
                         <p>Линейная модель</p>
                     </div>
                 </th>
                 <th colSpan='3'>
                     <div className={style.firstTitle}>
-                        <img src="/images/composite.png" alt="" />
+                        <img src={process.env.PUBLIC_URL + "/images/composite.png" }alt="" />
                         <p>Цель с осн. GA</p>
                     </div>
                     <div className={style.secondTitle}>
-                        <img src="/images/composite-2.png" alt="crm" />
+                        <img src={process.env.PUBLIC_URL + "/images/composite-2.png"} alt="crm" />
                         <p>Составная цель</p>
                     </div>
                 </th>

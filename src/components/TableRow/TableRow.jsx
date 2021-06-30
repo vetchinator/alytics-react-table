@@ -3,6 +3,7 @@ import useSortableData from '../useSortableData/useSortableData';
 import style from './TableRow.module.css';
 
 const TableRow = ({ data, sortConfig }) => {
+   
 
     const [show, setShow] = useState(false);
     const onClick = () => {
@@ -23,7 +24,7 @@ const TableRow = ({ data, sortConfig }) => {
                 <td colSpan='3'>
                     <div className={style.title}>
                         {(data.sources.length > 0) && <button className={style.button} onClick={onClick}>{show ? '-' : '+'}</button>}
-                        <img style={{ width: '20px', height: '20px' }} src={data.imgSrc} alt="logo" />
+                        <img style={{ width: '20px', height: '20px' }} src={process.env.PUBLIC_URL + data.imgSrc} alt="logo" />
                         <p>{data.name}</p>
                     </div>
                     <p className={style.type}>{data.type} {data.type === 'Группа.' && (data.sources.length > 0) ? <span>{`Источников ${data.sources.length}`} </span> : null}</p>
