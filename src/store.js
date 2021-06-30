@@ -15,7 +15,8 @@ export const services = [
         salesProceeds: 6778703,
         targetNumber: 29,
         targetCPA: 0,
-        targetCR: 10
+        targetCR: 10,
+        sources: []
     },
     {
         id: 2,
@@ -33,7 +34,8 @@ export const services = [
         salesProceeds: 423719,
         targetNumber: 23,
         targetCPA: 11,
-        targetCR: 32
+        targetCR: 32,
+        sources: []
     },
     {
         id: 3,
@@ -51,7 +53,8 @@ export const services = [
         salesProceeds: 423719,
         targetNumber: 23,
         targetCPA: 11,
-        targetCR: 32
+        targetCR: 32,
+        sources: []
     },
     {
         id: 4,
@@ -69,7 +72,8 @@ export const services = [
         salesProceeds: 2429134,
         targetNumber: 10,
         targetCPA: 14,
-        targetCR: 38
+        targetCR: 38,
+        sources: []
     },
     {
         id: 5,
@@ -87,7 +91,8 @@ export const services = [
         salesProceeds: 109487,
         targetNumber: 4,
         targetCPA: 0,
-        targetCR: 18
+        targetCR: 18,
+        sources: []
     },
     {
         id: 6,
