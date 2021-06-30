@@ -51,7 +51,7 @@ const TableRow = ({ data, sortConfig }) => {
                     <tr key={s.id} className={style.noBorder + ' ' + style.show}>
                         <td colSpan='3'>
                             <div className={style.title}>
-                                <img style={{ width: '20px', height: '20px' }} src={s.imgSrc} alt="logo" />
+                                <img style={{ width: '20px', height: '20px' }} src={process.env.PUBLIC_URL +s.imgSrc} alt="logo" />
                                 <p>{s.name}</p>
                             </div>
 
